@@ -29,7 +29,7 @@
     var domain = params['domain']?params['domain']:'';
     var user = params['user']?params['user']:'';
     var pass = params['pass']?params['pass']:'';
-    var url = sprintf('hgwmgeneral://login/%s/%s/%s/module/IRS', domain, user, pass);
+    var url = `hgwmgeneral://login/${domain}/${user}/${pass}/module/IRS`;
 
     console.log(url);
 
