@@ -5,7 +5,7 @@
     </head>
 <body>
   <h1>請按以下連結開啟</h1>
-  <a id="router" href="hgwmgeneral://login/WM_IRS_DEMO/spring/sss12345/module/IRS">點我開IRS</a>
+  <a id="router" href="#">點我開IRS</a>
 </body>
 <script>
     var queryString = window.location.search || '';
@@ -25,6 +25,13 @@
             params[key].push(keyValPairs[pairNum].split('=')[1]);
         }
     }
-    console.log(params);
+
+    var domain = params['domain']?params['domain']:'';
+    var user = params['user']?params['user']:'';
+    var pass = params['pass']?params['pass']:'';
+    var url = sprintf('hgwmgeneral://login/%s/%s/%s/module/IRS', domain, user, pass);
+
+    console.log(url);
+
 </script>
 </html>
