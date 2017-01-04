@@ -31,7 +31,6 @@
     var pass = params['pass']?params['pass']:'';
     var url = `hgwmgeneral://login/${domain}/${user}/${pass}/module/IRS`;
 
-    console.log(url);
-
+    document.getElementById('router').href = url;
 </script>
 </html>
